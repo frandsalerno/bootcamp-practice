@@ -3,7 +3,7 @@ h1{
 }
 
 table, th, td{
-    border: 1px solid #000;
+    border: 1px solid rgb(79, 75, 75);
     border-collapse: collapse;
     padding: 2px;
 }
