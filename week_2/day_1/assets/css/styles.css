@@ -1,0 +1,9 @@
+nav li{
+    display: inline;
+    list-style-type: none;
+    padding: 5px;
+}
+nav li:first-child{
+    margin-right: 30px;
+    position: static;
+}
