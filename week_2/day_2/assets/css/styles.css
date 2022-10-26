@@ -1,0 +1,56 @@
+/* reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* header styles*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #555;
+    padding: 7px 2%;
+}
+
+header h3{
+    color: #FFF;
+}
+
+/* main styles */
+main{
+    display: flex;
+    /* justify-content: space-around;
+    flex-direction: column; */
+    flex: 1;
+}
+
+.left-content{
+    flex: 1;
+}
+
+.right-content{
+    flex: 2;
+}
+
+/* footer styles */
+footer{
+    background-color: #ccc;
+    color: #FFF;
+    padding: 6px 2%;
+}
