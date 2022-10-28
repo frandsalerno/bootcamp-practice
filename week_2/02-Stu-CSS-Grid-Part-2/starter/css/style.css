@@ -122,3 +122,66 @@ h4 {
   margin: 0px 0px;
   color: #636364;
 }
+
+/* Category styles */
+.subheading{
+  text-align: center;
+  border-bottom: 2px solid #000;
+  width: 300px;
+  margin: 50px auto;
+}
+
+.categoryGrid{
+  margin: 0px 5%;
+  display: grid;
+  grid-template-areas: 
+  'sec1 sec2 sec3'
+  'sec4 sec4 sec3'
+  'sec5 sec5 sec5';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px 300px;
+}
+
+#bookcases{
+  background-image: url("../images/bookcases.png");
+  grid-area: sec1;
+}
+
+#bedroom{
+  background-image: url("../images/beds.png");
+  grid-area: sec2;
+}
+
+#couches{
+  background-image: url("../images/couch.png");
+  grid-area: sec4;
+}
+
+#patio{
+  background-image: url("../images/patio.png");
+  grid-area: sec3;
+}
+
+#desks{
+  background-image: url("../images/desks.png");
+  grid-area: sec5;
+}
+
+.categoryGridArea{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.heading{
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+  height: 25px;
+  color: #FFF;
+  font-size: 18px;
+  border-bottom: 5px solid #FF6200;
+}
