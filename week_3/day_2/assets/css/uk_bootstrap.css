@@ -1,3 +1,59 @@
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    animation: colors 3s infinite alternate;
+}
+
+/* Animations */
+@keyframes colors{
+    from{
+        background: orange;
+    }
+    to{
+        background: blue;
+    }
+}
+
+/* Global classes */
+.justify-space-between{
+    justify-content: space-between;
+}
+
 .row{
     display: flex;
+    margin-bottom: 25px;
+}
+
+.col{
+    flex: 1;
+}
+
+.col-2{
+    flex: 0 0 16.6666%;
+}
+
+.col-4{
+    flex: 0 0 33.3333%;
+}
+
+.col-6{
+    flex: 0 0 50%;
+}
+
+/* Custom styles */
+.main-header{
+
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    
 }
