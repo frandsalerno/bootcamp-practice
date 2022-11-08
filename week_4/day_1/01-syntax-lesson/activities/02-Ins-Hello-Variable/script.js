@@ -1,9 +1,12 @@
 var student = "Samuel";
 var age = 99;
 var thisRocks = true;
+var status = " is in class"
 
-console.log(student, age, thisRocks);
-console.log(age % 10);
+var output = student + age + status;
+
+console.log(student + ' ' + status);
+console.log(output);
 
 
 
