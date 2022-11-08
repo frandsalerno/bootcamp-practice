@@ -1,9 +1,6 @@
 /* Text */
-h1, h2, h3 , h4, h5, h6 {
-  font-family: 'Anton', sans-serif;
-}
-p {
-  font-family: 'Jura', sans-serif;
+h1, h2, h3 , h4, h5, h6, p, a {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Navigation bar */
@@ -21,7 +18,8 @@ p {
   margin-left: auto;
   margin-right: 0 !important;
 }
-.navbar-brand img {
+
+.navbar-brand{
   padding-right: 15px;
   width: 65px;
 }
