@@ -19,7 +19,7 @@ for (counter=0;counter<10;counter++) {
         alert('This is a draw');
         scored++;
         //If the winningcond includes the result
-    }else if(result===winningCond){
+    }else if(result===winningCond[0]||result===winningCond[1]||result===winningCond[2]){
         //The user won
         alert('You win');
         scorew++;
