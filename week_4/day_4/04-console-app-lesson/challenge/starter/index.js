@@ -87,11 +87,30 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+var total = 0;
+var diff = 0
+var diffMonthly = [];
+var increase = 0;
+var decrease = 0;
 
-// type number sum https://www.quora.com/What-is-the-best-algorithm-to-sum-numbers-in-nested-arrays
 
 for (var main_index = 0; main_index < finances.length; main_index++ ) {
-    for(var nested_index = 0; nested_index < finances[main_index].length; nested_index++) {
-      console.log(typeof(finances[main_index][nested_index]));
+  for(var nested_index = 0; nested_index < finances[main_index].length; nested_index++) {
+    // console.log(typeof(finances[main_index][nested_index]));
+    if(typeof(finances[main_index][nested_index]) === 'number'){
+      total += finances[main_index][nested_index];
+      // console.log(total);
+      diff = Math.abs(finances[main_index][nested_index]);
+      diffMonthly.push(diff);
     }
   }
+}
+console.log(diffMonthly);
+console.log(Math.max(...diffMonthly));
+
+
+// console.log('Financial Analysis');
+// console.log('-------------------------');
+// console.log('Total Months: ' + finances.length);
+// console.log('Total: $'+total); 
+// console.log('Average change: $'+(diff/finances.length).toFixed(2));
