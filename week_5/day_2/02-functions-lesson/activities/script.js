@@ -67,10 +67,10 @@ var petDB = [dog, cat, tarantula];
 //     // if (pet.type === 'cat') break;
 // }
 
-// for(var prop in tarantula ){
-//     // var pet = petDB[i];
-//     console.log(`${prop}: ${tarantula[prop]}`);
-// }
+for(var prop in tarantula ){
+    // var pet = petDB[i];
+    console.log(`${prop}: ${tarantula[prop]}`);
+}
 
 
 // for(var prop of Object.keys(tarantula) ){
@@ -78,9 +78,9 @@ var petDB = [dog, cat, tarantula];
 //     console.log(`${prop}: ${tarantula[prop]}`);
 // }
 
-for(var val of Object.values(tarantula) ){
-    // var pet = petDB[i];
-    // console.log(`${val}: ${tarantula[val]}`);
-    console.log(val);
-}
+// for(var val of Object.values(tarantula) ){
+//     // var pet = petDB[i];
+//     // console.log(`${val}: ${tarantula[val]}`);
+//     console.log(`${val} is the value of tarantula`);
+// }
 
