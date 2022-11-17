@@ -2,7 +2,6 @@
 function add(i, j){
     console.log(i+j);
 }
-
 add(1,2);
 
 function sub(i, j){
