@@ -90,8 +90,31 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  // using prompt() --> returns user input value as a string
+  // confirm() --> returns a boolean value
+  // use of character types - specChars, nums, LC, UC
+  // validate that the user selected at least one character type
+  // send user back to select again - can we call a function?
+  // password length
+  // validate At least 10 characters but no more than 64.
+  // send user back again - can we call a function?
+  // return true/selected character types & password length
+  var passlenght = prompt('How many characteres do you want the password to be - Please choose a number between 10 and 64')
+  if (passlenght > 64 || passlenght < 10){
+    getPasswordOptions()
+  }
+  function getPrompts(){
+    var passSC = confirm('Do you want to use special characters');
+    var passNum = confirm('Do you want to use numbers');
+    var passLC = confirm('Do you want to use lowercase characters');
+    var passUC = confirm('Do you want to use uppercase characters');
+    if (!passLC && !passNum && !passLC && !passUC){
+      alert('You need to choose at least one option');
+      getPrompts();
+    }
+  }
 }
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -100,7 +123,8 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-
+  // var pass = 'Elmundo!'
+  // return pass;
 }
 
 // Get references to the #generate element
