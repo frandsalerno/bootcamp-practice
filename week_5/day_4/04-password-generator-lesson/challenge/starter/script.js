@@ -102,29 +102,52 @@ function getPasswordOptions() {
   var passlenght = prompt('How many characteres do you want the password to be - Please choose a number between 10 and 64')
   if (passlenght > 64 || passlenght < 10){
     getPasswordOptions()
+    alert ('Password must be between 10 and 64 characteres');
   }
-  function getPrompts(){
-    var passSC = confirm('Do you want to use special characters');
-    var passNum = confirm('Do you want to use numbers');
-    var passLC = confirm('Do you want to use lowercase characters');
-    var passUC = confirm('Do you want to use uppercase characters');
-    if (!passLC && !passNum && !passLC && !passUC){
-      alert('You need to choose at least one option');
-      getPrompts();
-    }
-  }
-}
 
+  var passSC = confirm('Do you want to use special characters');
+  var passNum = confirm('Do you want to use numbers');
+  var passLC = confirm('Do you want to use lowercase characters');
+  var passUC = confirm('Do you want to use uppercase characters');
+  if (!passLC && !passNum && !passSC && !passUC){
+    alert('You need to choose at least one option');
+  } 
+  return{
+    passlenght:passlenght, 
+    passSC:passSC, 
+    passNum:passNum, 
+    passLC:passLC, 
+    passUC:passUC
+  };
+}
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  var randSC = arr[(Math.floor(Math.random() * arr.length))];
+  return randSC;
 }
+
 
 // Function to generate password with user input
 function generatePassword() {
-  // var pass = 'Elmundo!'
-  // return pass;
+  var passOptions = getPasswordOptions();
+  var pass='';
+  // console.log(passOptions);
+  var passValues = Object.keys(passOptions);
+  
+  for(i=0; i < passOptions.passlenght; i++){    
+      if (passOptions.passSC == true){
+        pass += (getRandom(specialCharacters));
+      } if(passOptions.passNum == true){
+        pass += (getRandom(numericCharacters));
+      }  if (passOptions.passLC == true){
+        pass += (getRandom(lowerCasedCharacters));
+      }  if (passOptions.passUC == true){
+        pass += (getRandom(upperCasedCharacters));
+      }
+  }
+  
+  return pass;
 }
 
 // Get references to the #generate element
@@ -134,7 +157,6 @@ var generateBtn = document.querySelector('#generate');
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
-
   passwordText.value = password;
 }
 
