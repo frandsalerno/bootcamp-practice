@@ -90,19 +90,10 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  // using prompt() --> returns user input value as a string
-  // confirm() --> returns a boolean value
-  // use of character types - specChars, nums, LC, UC
-  // validate that the user selected at least one character type
-  // send user back to select again - can we call a function?
-  // password length
-  // validate At least 10 characters but no more than 64.
-  // send user back again - can we call a function?
-  // return true/selected character types & password length
   var passlenght = prompt('How many characteres do you want the password to be - Please choose a number between 10 and 64')
   if (passlenght > 64 || passlenght < 10){
-    getPasswordOptions()
     alert ('Password must be between 10 and 64 characteres');
+    getPasswordOptions()
   }
 
   var passSC = confirm('Do you want to use special characters');
@@ -111,6 +102,7 @@ function getPasswordOptions() {
   var passUC = confirm('Do you want to use uppercase characters');
   if (!passLC && !passNum && !passSC && !passUC){
     alert('You need to choose at least one option');
+    getPasswordOptions();
   } 
   return{
     passlenght:passlenght, 
@@ -135,14 +127,28 @@ function generatePassword() {
   // console.log(passOptions);
   var passValues = Object.keys(passOptions);
   
-  for(i=0; i < passOptions.passlenght; i++){    
-      if (passOptions.passSC == true){
+  for(i=0; i < passOptions.passlenght ; i++){    
+      if(passOptions.passSC == true){
+        if (pass.length == passOptions.passlenght) {
+          break; 
+        }
         pass += (getRandom(specialCharacters));
-      } if(passOptions.passNum == true){
+      } 
+      if (passOptions.passNum == true){
+        if (pass.length == passOptions.passlenght) {
+          break; 
+        }
         pass += (getRandom(numericCharacters));
-      }  if (passOptions.passLC == true){
+      }  
+      if (passOptions.passLC == true){
+        if (pass.length == passOptions.passlenght) {
+          break; 
+        }
         pass += (getRandom(lowerCasedCharacters));
       }  if (passOptions.passUC == true){
+        if (pass.length == passOptions.passlenght) {
+          break; 
+        }
         pass += (getRandom(upperCasedCharacters));
       }
   }
