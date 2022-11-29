@@ -36,11 +36,16 @@ function printer(arr){
 
 // printer(users2);
 
-console.log(document.body.children[0]);
 
-var newTitle = document.body.children[0];
+// var title = document.body.children[0];
 
-newTitle.innerHTML = 'Almost December';
+// var title = document.getElementById('main-header');
 
-console.log(document.body.children[1].children[1]);
+var title = document.querySelector('#main-header');
+
+title.innerHTML = 'Almost December';
+
+title.style.color = 'red';
+
+
 

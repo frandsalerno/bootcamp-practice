@@ -12,5 +12,5 @@ var header = document.getElementById('header');
 header.children[0].style.color =  '#FFF';
 
 var article = document.getElementById('articles');
-console.log(article.children[0].children[1]);
+// console.log(article.children[0].children[1]);
 article.children[0].children[1].style.fontSize = '50px';
