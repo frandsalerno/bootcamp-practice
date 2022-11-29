@@ -167,30 +167,8 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
   passwordText.value = password;
-  copyPassword.style.display = 'block';
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
-
-//Copy password to clipboard
-function copyPass() {
-  // Get the text field
-  var copyText = document.getElementById('password');
-  console.log(copyText.value);
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-  
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
-  
-  // Alert the copied text
-  // then alert('Your new password has been copied to the clipboard');
-  copyPassword.style.backgroundColor = '#5ee47f';
-  copyPassword.innerHTML=('Password copied');
-}
-
-//Add event listener to copy password
-// copyPassword.addEventListener('click', copyPass);
