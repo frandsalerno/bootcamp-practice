@@ -22,3 +22,5 @@ decrementEl.addEventListener('click',function(){
   alert('Count should be a positive number')
  }
 })
+
+
