@@ -1,0 +1,27 @@
+.output{
+    width: 100%;
+}
+
+.output div{
+    background: rgba(61, 206, 239, 0.617);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: background .7s;
+}
+
+.output div:hover{
+    background: rgba(74, 227, 199, 0.9);
+}
+
+.output h3{
+    font-size: 1.7rem;
+    color: #FFF;
+}
+
+.output div p{
+    font-size: 1.3rem;
+}
