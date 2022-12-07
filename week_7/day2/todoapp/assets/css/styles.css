@@ -1,0 +1,72 @@
+body{
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/Users/floryfran/bootcamp/bootcamp-practice/week_7/day2/todoapp/assets/img/bg-min.jpeg');
+    background-size: cover;
+} 
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper{
+    max-width: 600px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.wrapper input{
+    width: 90%;
+    align-self: center;
+    padding: 10px;
+    font-family: 'Poppins';
+}
+
+#counterWrap{
+    color: #309c8f;
+    font-weight: bold;
+}
+
+#todoList{
+    display: flex;
+    flex-direction: column;
+}
+
+#todoList li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 0.5px solid #ccc;
+}
+
+#todoList li p {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+#todoList li button{
+    align-self: end;
+    border: none;
+    background: #5ac5a9;
+    border-radius: 2px;
+    padding: 5px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+.hide{
+    display: none !important;
+}
