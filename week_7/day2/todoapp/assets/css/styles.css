@@ -10,11 +10,13 @@ body{
 
 ul {
     padding: 0;
+    margin: 7px 0;
 }
 
 li {
     list-style: none;
 }
+
 
 .wrapper{
     max-width: 600px;
@@ -25,20 +27,29 @@ li {
 }
 
 .wrapper input{
-    width: 90%;
+    width: 95%;
     align-self: center;
     padding: 10px;
     font-family: 'Poppins';
 }
 
+.newItemsList{
+    background: #1886c61f;
+    padding: 5px;
+    border-radius: 2px;
+    margin: 15px 0 10px;
+}
+
 #counterWrap{
-    color: #309c8f;
-    font-weight: bold;
+    color: #1986c6;
+    margin: 5px 0 10px;
+    margin-top: 5px;
 }
 
 #todoList{
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
 }
 
 #todoList li{
@@ -66,7 +77,34 @@ li {
     cursor: pointer;
 }
 
+#todoList li button:hover{
+    background: #2e8971
+}
 
+.completedSection{
+    background: #f8f8f8;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+#tasksCompleted{
+    margin: 7px 0;
+}
+
+#completedList{
+    margin-top: 5px;
+}
+#completedList li{
+    background: #cccccc5e;
+    padding: 0 5px;
+    border-radius: 2px;
+}
+
+#completedList li p{
+    text-decoration: line-through;
+    font-style: italic;
+    margin: 0 0 2px;
+}
 .hide{
     display: none !important;
 }
