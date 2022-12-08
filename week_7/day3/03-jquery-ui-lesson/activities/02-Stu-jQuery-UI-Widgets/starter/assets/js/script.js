@@ -31,7 +31,7 @@ formEl.on('submit', handleFormSubmit);
 
 // Add Autocomplete widget here
 //
-var availableTags = [
+var skills = [
   'jQuery',
   'Vue JS',
   'React',
@@ -44,14 +44,13 @@ var availableTags = [
   'Vanilla JS'
 ];
 
-$('#skill-name').autocomplete({
-  source: availableTags
+nameInputEl.autocomplete({
+  source: skills
 });
 
 
 // Add Datepicker widget here
 //
 
-$( function() {
-  $( "#datepicker" ).datepicker();
-} );
+dateInputEl.datepicker();
+

@@ -66,3 +66,16 @@ $(function () {
 
 // Add interaction here
 //
+skillsListEl.sortable({
+  update: function(){
+    var items = $('#skills-list li');
+    var skills = [];
+
+    items.each(function(){
+      var li = $(this);
+      skills.push(li.text());
+    })
+    
+    localStorage.setItem('skills', JSON.stringify(skills));
+  }
+});
