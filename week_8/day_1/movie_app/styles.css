@@ -50,6 +50,7 @@ input.search{
     border: 1px solid var(--blue);
     outline: none;
     margin-bottom: 35px;
+    color: #555;
 }
 
 input.search::placeholder{
