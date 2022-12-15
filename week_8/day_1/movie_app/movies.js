@@ -9,7 +9,7 @@ var movieData = [
         title: 'Matrix',
         description: 'a movie about dinosaurs',
         imdb_link: 'https://www.imdb.com/chart/top/',
-        movie_image: 'https://api.lorem.space/image/game?w=150&h=220'
+        movie_image: 'https://api.lorem.space/image/movie?w=150&h=220'
     },
     {
         title: 'Amelie',
