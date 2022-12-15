@@ -15,17 +15,17 @@ function noMatch(){
 function displayMatches(matches){
     cardWrapper.innerHTML = '';
 
-    if (!matches.length){
+    if (!matches){
         noMatch();
-    }
-
-    for (var matchObject of matches){
-        cardWrapper.insertAdjacentHTML("beforeend",`
-        <div class="movie-card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${matchObject.Poster});">
-        <h3>${matchObject.Title}</h3>
-        <p>Release year ${matchObject.Year}</p>
-        <a href="https://www.imdb.com/title/${matchObject.imdbID}" target="_blank">View More Info Here</a>
-        </div>`)
+    }else{
+        for (var matchObject of matches){
+            cardWrapper.insertAdjacentHTML("beforeend",`
+            <div class="movie-card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${matchObject.Poster});">
+            <h3>${matchObject.Title}</h3>
+            <p>Release year ${matchObject.Year}</p>
+            <a href="https://www.imdb.com/title/${matchObject.imdbID}" target="_blank">View More Info Here</a>
+            </div>`)
+        }
     }
 }
 
