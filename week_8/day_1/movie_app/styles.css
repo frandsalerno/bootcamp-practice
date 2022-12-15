@@ -1,49 +1,51 @@
 /* VARIABLES */
-:root{
+:root {
     --blue: #048BA8;
     --orange: #F18F01;
 }
 
 /* RESETS */
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     height: 100%;
 }
 
-body{
+body {
     font-family: sans-serif;
 }
 
 /* GLOBAL CLASSES */
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.row, .column{
+.row,
+.column {
     display: flex;
 }
 
-.column{
+.column {
     flex-direction: column;
 }
 
-.justify-center{
+.justify-center {
     justify-content: center;
 }
 
 /* CUSTOM STYLES */
 
-h1.main-header{
+h1.main-header {
     margin: 20px 0 25px;
     color: var(--blue);
 }
 
-input.search{
+input.search {
     padding: 8px 15px;
     width: 350px;
     border-radius: 30px;
@@ -53,7 +55,7 @@ input.search{
     color: #555;
 }
 
-input.search::placeholder{
+input.search::placeholder {
     color: var(--blue);
     text-align: center;
 }
@@ -65,35 +67,35 @@ main {
     padding: 0 3%;
 }
 
-main .movie-card{
+main .movie-card {
     padding: 15px 10px;
     border: 4px solid var(--blue);
     border-radius: 4px;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://api.lorem.space/image/movie?w=250&h=280
-    );
+
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     color: #FFF;
 }
 
-main .movie-card > *:not(:last-child){
-    margin-bottom: 5px;    
+main .movie-card>*:not(:last-child) {
+    margin-bottom: 5px;
 }
 
-main p.no-search{
+main p.no-search {
     grid-column: 1/5;
     color: var(--blue);
 }
 
-main .movie-card h3{
+main .movie-card h3 {
     font-size: 1rem;
 }
 
-main .movie-card p{
+main .movie-card p {
     font-size: .9rem;
 }
 
-main .movie-card a{
+main .movie-card a {
     color: var(--orange);
     font-size: .8rem;
     text-decoration: none;
