@@ -1,9 +1,9 @@
-var $root = document.querySelector("#root");
+const $root = document.querySelector("#root");
 
-var score;
-var targetScore;
+let score;
+let targetScore;
 
-var makeGuess = function() {
+const makeGuess = function() {
   var $score = document.querySelector("#root p");
   $score.textContent = "Score: " + score + " | " + "Target: " + targetScore;
 
