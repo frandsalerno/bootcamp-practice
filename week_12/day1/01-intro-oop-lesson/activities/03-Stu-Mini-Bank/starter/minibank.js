@@ -1,34 +1,3 @@
-// function MiniBank(balance) {
-//   this.balance = balance;
-//   this.statement = [balance];
-//   this.setBalance = (value) => {
-//     this.balance = value;
-//   };
-//   this.updateStatement = (number) => {
-//     this.statement.push(number);
-//   };
-//   this.getStatement() = () => {
-//     return this.statement;
-//   };
-//   this.printStatement() = () => {
-//     console.log(this.statement);
-//   };
-//   this.deposit() = (value) => {
-//     updateStatement(value);
-//     setBalance(value);
-//   }
-//   this.withdraw() = (value) => {
-//     updateStatement(-value);
-//     setBalance(value);
-//   }
-//   this.getBalance = () => {
-//     return this.balance;
-//   };
-//   this.printBalance = () => {
-//     console.log(`Balance: ${this.getBalance()}`);
-//   };
-// }
-
 function MiniBank(balance){
   this.balance = balance;
   this.statement = [balance];
